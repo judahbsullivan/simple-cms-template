@@ -2,6 +2,7 @@
   "name": "my-studio",
   "scripts": {
     "setup": "npm install && npm run build",
+    "dev": "docker compose up",
     "build-extensions": "tsx ./scripts/build.ts",
     "build": "npm run build-extensions && docker build -t directus-cms-template .",
     "start": "npm run build && docker compose up",
