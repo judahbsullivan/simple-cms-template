@@ -1,8 +1,13 @@
 {
   "name": "my-studio",
   "scripts": {
+    "setup": "npm install && npm run build",
+    "build-extensions": "tsx ./scripts/build.ts",
     "build": "npm run build-extensions && docker build -t directus-cms-template .",
-    "build-extensions": "./scripts/buildExtensions.sh"
+    "start": "npm run setup && npm run build && docker compose up --build",
+    "docker:dev": "docker compose up -d",
+    "docker:start": "docker compose up --build",
+    "stop": "docker compose down"
   },
   "packageManager": "npm@9.7.2",
   "dependencies": {
@@ -10,6 +15,8 @@
     "@directus/extensions-sdk": "^13.0.4",
     "@types/node": "^22.14.1",
     "esbuild": "^0.25.2",
+    "os": "^0.1.2",
+    "tsx": "^4.19.3",
     "typescript": "^5.8.3"
   }
 }
