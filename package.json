@@ -1,0 +1,15 @@
+{
+  "name": "my-studio",
+  "scripts": {
+    "build": "npm run build-extensions && docker build -t directus-cms-template .",
+    "build-extensions": "./scripts/buildExtensions.sh"
+  },
+  "packageManager": "npm@9.7.2",
+  "dependencies": {
+    "@directus/errors": "^2.0.1",
+    "@directus/extensions-sdk": "^13.0.4",
+    "@types/node": "^22.14.1",
+    "esbuild": "^0.25.2",
+    "typescript": "^5.8.3"
+  }
+}

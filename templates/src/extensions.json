@@ -1,0 +1,784 @@
+[
+  {
+    "id": "17e03960-4a2e-40a4-9558-0bdb56332d23",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "17e03960-4a2e-40a4-9558-0bdb56332d23",
+      "folder": "inline-repeater-interface",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/inline-repeater-interface",
+      "name": "@directus-labs/inline-repeater-interface",
+      "version": "1.0.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "1c09c3a4-2750-4a01-94fd-c0d91fe35870",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "1c09c3a4-2750-4a01-94fd-c0d91fe35870",
+      "folder": "467d87ba-5246-41b7-be33-2bd0aa9c6c5e",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/467d87ba-5246-41b7-be33-2bd0aa9c6c5e",
+      "name": "@directus-labs/ai-image-generation-operation",
+      "version": "1.0.1",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.openai.com/v1/**"
+            ],
+            "methods": [
+              "POST"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "20020ae9-fb79-436d-8a16-2c712f0f3ede",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "20020ae9-fb79-436d-8a16-2c712f0f3ede",
+      "folder": "command-palette-module",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/command-palette-module",
+      "name": "@directus-labs/command-palette-module",
+      "version": "1.1.0",
+      "type": "module",
+      "entrypoint": "dist/index.js",
+      "host": "^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "296494ff-3bf8-4c68-ade5-0a4805e775e2",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "296494ff-3bf8-4c68-ade5-0a4805e775e2",
+      "folder": "ai-writer-operation",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/ai-writer-operation",
+      "name": "@directus-labs/ai-writer-operation",
+      "version": "1.4.0",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.0.0 || ^11.0.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.openai.com/v1/**",
+              "https://api.anthropic.com/v1/**",
+              "https://api.replicate.com/v1/**"
+            ],
+            "methods": [
+              "POST",
+              "GET"
+            ]
+          },
+          "log": {},
+          "sleep": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "2d64a791-0274-441b-88d3-70675fb29335",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "2d64a791-0274-441b-88d3-70675fb29335",
+      "folder": "09bdf221-3b49-44ff-a514-6258a67ff587",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/09bdf221-3b49-44ff-a514-6258a67ff587",
+      "name": "@directus-labs/experimental-m2a-interface",
+      "version": "1.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "335e9232-b5c7-48bf-ae06-d4e524df53a6",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "335e9232-b5c7-48bf-ae06-d4e524df53a6",
+      "folder": "8ae044cb-6f8c-4196-8392-8c3ae8f9071d",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/8ae044cb-6f8c-4196-8392-8c3ae8f9071d",
+      "name": "@directus-labs/super-header-interface",
+      "version": "1.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "631b181f-3a8d-44be-a7e4-120326a9d733",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "631b181f-3a8d-44be-a7e4-120326a9d733",
+      "folder": "4cd50f5f-886b-451b-aac7-efb4ea2587a5",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/4cd50f5f-886b-451b-aac7-efb4ea2587a5",
+      "name": "@directus-labs/inline-repeater-interface",
+      "version": "1.0.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+      "folder": "071941f2-2afa-4341-8f88-2a8198bb9f2e",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/071941f2-2afa-4341-8f88-2a8198bb9f2e",
+      "name": "@directus-labs/seo-plugin",
+      "version": "1.0.0",
+      "type": "bundle",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "entries": [
+        {
+          "name": "seo-interface",
+          "type": "interface"
+        },
+        {
+          "name": "seo-display",
+          "type": "display"
+        }
+      ],
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "7cddb7e2-7073-4a7d-a788-77b3c71125ef",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "7cddb7e2-7073-4a7d-a788-77b3c71125ef",
+      "folder": "directus-extension-group-tabs-interface",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/directus-extension-group-tabs-interface",
+      "name": "directus-extension-group-tabs-interface",
+      "version": "2.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.1.0",
+      "local": true
+    }
+  },
+  {
+    "id": "8817e300-bb1c-44b8-a4ae-6034f5024fa4",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "8817e300-bb1c-44b8-a4ae-6034f5024fa4",
+      "folder": "simple-list-interface",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/simple-list-interface",
+      "name": "@directus-labs/simple-list-interface",
+      "version": "1.0.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "8a827d6a-f820-4814-8803-9bcf398282d4",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "8a827d6a-f820-4814-8803-9bcf398282d4",
+      "folder": "9bde3cf6-c3bd-4bbf-befe-e65294d4b632",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/9bde3cf6-c3bd-4bbf-befe-e65294d4b632",
+      "name": "directus-extension-wpslug-interface",
+      "version": "1.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^v9.9.0",
+      "local": true
+    }
+  },
+  {
+    "id": "8c20b301-38aa-48a7-99c4-3142338da1b2",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "8c20b301-38aa-48a7-99c4-3142338da1b2",
+      "folder": "b9534a05-19a0-4f19-912b-729086969eef",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/b9534a05-19a0-4f19-912b-729086969eef",
+      "name": "@directus-labs/ai-writer-operation",
+      "version": "1.3.1",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.0.0 || ^11.0.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.openai.com/v1/**",
+              "https://api.anthropic.com/v1/**",
+              "https://api.replicate.com/v1/**"
+            ],
+            "methods": [
+              "POST",
+              "GET"
+            ]
+          },
+          "log": {},
+          "sleep": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "a2587ead-a73a-4718-88e2-02de0c78d57a",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "a2587ead-a73a-4718-88e2-02de0c78d57a",
+      "folder": "f313973c-0a76-4eec-9bdf-8a37713bd797",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/f313973c-0a76-4eec-9bdf-8a37713bd797",
+      "name": "@directus-labs/liquidjs-operation",
+      "version": "1.1.0",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "http://*",
+              "https://*"
+            ],
+            "methods": [
+              "GET"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "a2cd58a0-79e8-4f1f-8279-202ed795a147",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "a2cd58a0-79e8-4f1f-8279-202ed795a147",
+      "folder": "seo-plugin",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/seo-plugin",
+      "name": "@directus-labs/seo-plugin",
+      "version": "1.0.1",
+      "type": "bundle",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "entries": [
+        {
+          "name": "seo-interface",
+          "type": "interface"
+        },
+        {
+          "name": "seo-display",
+          "type": "display"
+        }
+      ],
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "ad7fd9a6-3661-4ed7-8172-6af1902a241f",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "ad7fd9a6-3661-4ed7-8172-6af1902a241f",
+      "folder": "super-header-interface",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/super-header-interface",
+      "name": "@directus-labs/super-header-interface",
+      "version": "1.1.1",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "af053cdb-242e-4142-a053-e3e23d7658e5",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "af053cdb-242e-4142-a053-e3e23d7658e5",
+      "folder": "3f627cf9-4079-4880-b32a-3848829c93dc",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/3f627cf9-4079-4880-b32a-3848829c93dc",
+      "name": "@directus-labs/card-select-interfaces",
+      "version": "1.0.0",
+      "type": "bundle",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "entries": [
+        {
+          "name": "radio-cards-interface",
+          "type": "interface"
+        },
+        {
+          "name": "checkbox-cards-interface",
+          "type": "interface"
+        },
+        {
+          "name": "image-uuid-interface",
+          "type": "interface"
+        }
+      ],
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "bfa185ec-f15c-4d3e-8e0e-06925ba6cdfe",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "bfa185ec-f15c-4d3e-8e0e-06925ba6cdfe",
+      "folder": "3b80b125-4f65-4a6f-96c6-4ede2ed9f506",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/3b80b125-4f65-4a6f-96c6-4ede2ed9f506",
+      "name": "@directus-labs/simple-list-interface",
+      "version": "1.0.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "c53d1496-ab3b-4a23-9b0c-9fb8ce85800f",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "c53d1496-ab3b-4a23-9b0c-9fb8ce85800f",
+      "folder": "b5913ec2-e23c-47d7-ba58-d359334d75f4",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/b5913ec2-e23c-47d7-ba58-d359334d75f4",
+      "name": "@directus-labs/command-palette-module",
+      "version": "1.1.0",
+      "type": "module",
+      "entrypoint": "dist/index.js",
+      "host": "^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "dab2c341-5ce5-42da-872f-40e596c4db16",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "dab2c341-5ce5-42da-872f-40e596c4db16",
+      "folder": "9621987d-012d-475a-bd7f-e293cac7b077",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/9621987d-012d-475a-bd7f-e293cac7b077",
+      "name": "directus-extension-group-tabs-interface",
+      "version": "2.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.1.0",
+      "local": true
+    }
+  },
+  {
+    "id": "dc0c03c4-e42b-4dba-91d7-b5520bb0d22d",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "dc0c03c4-e42b-4dba-91d7-b5520bb0d22d",
+      "folder": "experimental-m2a-interface",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/experimental-m2a-interface",
+      "name": "@directus-labs/experimental-m2a-interface",
+      "version": "1.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "edf37c31-fb40-4676-bf9d-ca28251f9185",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "edf37c31-fb40-4676-bf9d-ca28251f9185",
+      "folder": "ai-image-generation-operation",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/ai-image-generation-operation",
+      "name": "@directus-labs/ai-image-generation-operation",
+      "version": "1.0.2",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.openai.com/v1/**"
+            ],
+            "methods": [
+              "POST"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "f38a1fa3-b91b-4b65-a0f0-1ad0634d5a4e",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "f38a1fa3-b91b-4b65-a0f0-1ad0634d5a4e",
+      "folder": "liquidjs-operation",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/liquidjs-operation",
+      "name": "@directus-labs/liquidjs-operation",
+      "version": "1.1.0",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "http://*",
+              "https://*"
+            ],
+            "methods": [
+              "GET"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "f7312c82-fb6b-4bad-bd81-210336c5f005",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "f7312c82-fb6b-4bad-bd81-210336c5f005",
+      "folder": "card-select-interfaces",
+      "source": "local",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/card-select-interfaces",
+      "name": "@directus-labs/card-select-interfaces",
+      "version": "1.0.0",
+      "type": "bundle",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "entries": [
+        {
+          "name": "radio-cards-interface",
+          "type": "interface"
+        },
+        {
+          "name": "checkbox-cards-interface",
+          "type": "interface"
+        },
+        {
+          "name": "image-uuid-interface",
+          "type": "interface"
+        }
+      ],
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "1a29d26c-439f-4144-b935-30eb5e57a004",
+    "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
+    "meta": {
+      "enabled": true,
+      "id": "1a29d26c-439f-4144-b935-30eb5e57a004",
+      "folder": "image-uuid-interface",
+      "source": "registry",
+      "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5"
+    },
+    "schema": {
+      "name": "image-uuid-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "45b6bdb4-495e-433b-80a9-65fb9edd59e3",
+    "bundle": "a2cd58a0-79e8-4f1f-8279-202ed795a147",
+    "meta": {
+      "enabled": true,
+      "id": "45b6bdb4-495e-433b-80a9-65fb9edd59e3",
+      "folder": "seo-interface",
+      "source": "local",
+      "bundle": "a2cd58a0-79e8-4f1f-8279-202ed795a147"
+    },
+    "schema": {
+      "name": "seo-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "acd6aabe-b424-441b-93d8-c04ac097f256",
+    "bundle": "f7312c82-fb6b-4bad-bd81-210336c5f005",
+    "meta": {
+      "enabled": true,
+      "id": "acd6aabe-b424-441b-93d8-c04ac097f256",
+      "folder": "radio-cards-interface",
+      "source": "local",
+      "bundle": "f7312c82-fb6b-4bad-bd81-210336c5f005"
+    },
+    "schema": {
+      "name": "radio-cards-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "af76dba8-784f-40c5-acc4-72ffe62a611c",
+    "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
+    "meta": {
+      "enabled": true,
+      "id": "af76dba8-784f-40c5-acc4-72ffe62a611c",
+      "folder": "radio-cards-interface",
+      "source": "registry",
+      "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5"
+    },
+    "schema": {
+      "name": "radio-cards-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "b3b2e78f-2210-4f13-9832-7a91ab60be20",
+    "bundle": "f7312c82-fb6b-4bad-bd81-210336c5f005",
+    "meta": {
+      "enabled": true,
+      "id": "b3b2e78f-2210-4f13-9832-7a91ab60be20",
+      "folder": "checkbox-cards-interface",
+      "source": "local",
+      "bundle": "f7312c82-fb6b-4bad-bd81-210336c5f005"
+    },
+    "schema": {
+      "name": "checkbox-cards-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "d36366b1-f73a-4fae-9a2c-8a5365842184",
+    "bundle": "f7312c82-fb6b-4bad-bd81-210336c5f005",
+    "meta": {
+      "enabled": true,
+      "id": "d36366b1-f73a-4fae-9a2c-8a5365842184",
+      "folder": "image-uuid-interface",
+      "source": "local",
+      "bundle": "f7312c82-fb6b-4bad-bd81-210336c5f005"
+    },
+    "schema": {
+      "name": "image-uuid-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "dbeb1b32-a097-4dcd-9b96-527c77fd769a",
+    "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
+    "meta": {
+      "enabled": true,
+      "id": "dbeb1b32-a097-4dcd-9b96-527c77fd769a",
+      "folder": "checkbox-cards-interface",
+      "source": "registry",
+      "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5"
+    },
+    "schema": {
+      "name": "checkbox-cards-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "ea010b45-58b9-4253-afd8-d9d1d0015b05",
+    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "meta": {
+      "enabled": true,
+      "id": "ea010b45-58b9-4253-afd8-d9d1d0015b05",
+      "folder": "seo-display",
+      "source": "registry",
+      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
+    },
+    "schema": {
+      "name": "seo-display",
+      "type": "display"
+    }
+  },
+  {
+    "id": "efddde59-df27-47a8-8d29-12405533130f",
+    "bundle": "a2cd58a0-79e8-4f1f-8279-202ed795a147",
+    "meta": {
+      "enabled": true,
+      "id": "efddde59-df27-47a8-8d29-12405533130f",
+      "folder": "seo-display",
+      "source": "local",
+      "bundle": "a2cd58a0-79e8-4f1f-8279-202ed795a147"
+    },
+    "schema": {
+      "name": "seo-display",
+      "type": "display"
+    }
+  },
+  {
+    "id": "f224b430-77b5-441e-886d-8c118dbe07a0",
+    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "meta": {
+      "enabled": true,
+      "id": "f224b430-77b5-441e-886d-8c118dbe07a0",
+      "folder": "seo-interface",
+      "source": "registry",
+      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
+    },
+    "schema": {
+      "name": "seo-interface",
+      "type": "interface"
+    }
+  }
+]
