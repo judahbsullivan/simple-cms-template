@@ -34,6 +34,7 @@ COPY ./templates /directus/templates
 USER node
 
 # Start Directus on container start
-CMD ["node", "/directus/cli.js", "start"]
+# CMD ["node", "/directus/cli.js", "start"]
+CMD ["sh", "-c", "node /directus/cli.js bootstrap && node /directus/cli.js start"]
 
 

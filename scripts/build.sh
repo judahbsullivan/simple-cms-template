@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sed -i 's/\r//' "$0"
+
 # Colors
 GREEN="\033[1;32m"
 YELLOW="\033[1;33m"

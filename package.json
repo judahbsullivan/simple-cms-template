@@ -4,7 +4,7 @@
     "setup": "npm install && npm run build",
     "build-extensions": "tsx ./scripts/build.ts",
     "build": "npm run build-extensions && docker build -t directus-cms-template .",
-    "start": "npm run setup && npm run build && docker compose up --build",
+    "start": "npm run build && docker compose up",
     "docker:dev": "docker compose up -d",
     "docker:start": "docker compose up --build",
     "stop": "docker compose down"
