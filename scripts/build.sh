@@ -12,6 +12,8 @@ RESET="\033[0m"
 BOLD="\033[1m"
 CHECKMARK="\xE2\x9C\x94"
 
+rm -rf ./extensions/.registry
+
 # Loop through each directory in extensions/*
 for dir in ./extensions/*; do
 	if [ -d "$dir" ]; then
