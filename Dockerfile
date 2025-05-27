@@ -3,21 +3,22 @@
 ###############################
 FROM oven/bun:1.1.13-alpine AS builder
 
-WORKDIR /app/extensions
+# Set the working directory to the project root
+WORKDIR /app
 
-# Install build tools if needed for native modules
+# Install system dependencies
 RUN apk add --no-cache python3 py3-setuptools build-base curl
 
-# Copy package files first
-COPY ./extensions/package.json ./extensions/package.json 
+# Copy root-level package files
+COPY ./package.json ./bun.lockb* ./
 
-# Install dependencies using Bun
+# Install dependencies
 RUN bun install
 
-# Copy the rest of the extension source code
-COPY ./extensions .
+# Copy the rest of the project files (including extensions, scripts, etc.)
+COPY . .
 
-# Run your custom build script via bun
+# Run the extension build script (defined in root package.json)
 RUN bun run build-extensions
 
 
@@ -28,26 +29,21 @@ FROM directus/directus:latest
 
 WORKDIR /directus
 
-# Become root to install tools and adjust file permissions
 USER root
 
-# Install tools used in startup script
 RUN apk add --no-cache jq curl
 
-# Copy the built extensions over and fix ownership
+# Copy built extensions from builder (adjust if your build output goes elsewhere)
 COPY --from=builder --chown=node:node /app/extensions /directus/extensions
 
-# Copy templates and entry scripts
+# Copy templates and start scripts
 COPY ./templates /directus/templates
 COPY ./scripts/start.sh /directus/start.sh
 COPY ./scripts/start.bat /directus/start.bat
 
-# Make the start.sh script executable
 RUN chmod +x /directus/start.sh
 
-# Drop to node user
 USER node
 
-# Start using the custom entrypoint
 CMD ["sh", "/directus/start.sh"]
 
