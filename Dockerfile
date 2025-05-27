@@ -3,13 +3,23 @@
 ###############################
 FROM node:18-alpine AS builder
 
-WORKDIR /app
+WORKDIR /app/extensions
 
-# Install build tools (optional, remove if not needed)
+# Install build tools for native modules (e.g., for bcrypt, sqlite, etc.)
 RUN apk add --no-cache python3 py3-setuptools build-base curl
 
-# Copy extensions folder as-is, no npm install/build because no package.json
-COPY ./extensions /app/extensions
+# Copy package files first (for better Docker caching)
+COPY ./extensions/package.json ./extensions/package-lock.json* ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the extension source code
+COPY ./extensions .
+
+# Run the build script (assumes "build" exists in package.json)
+RUN npm run build
+
 
 ###############################
 # Final Stage
@@ -18,13 +28,12 @@ FROM directus/directus:latest
 
 WORKDIR /directus
 
-# Switch to root for installing tools and permissions
 USER root
 
 # Install jq and curl needed by start.sh
 RUN apk add --no-cache jq curl
 
-# Copy extensions from builder to final image, set ownership
+# Copy built extensions from builder and set proper ownership
 COPY --from=builder --chown=node:node /app/extensions /directus/extensions
 
 # Copy templates and start scripts
@@ -35,8 +44,9 @@ COPY ./scripts/start.bat /directus/start.bat
 # Make start.sh executable
 RUN chmod +x /directus/start.sh
 
-# Drop to non-root user
+# Drop back to non-root user
 USER node
 
+# Start the custom entry script
 CMD ["sh", "/directus/start.sh"]
 
