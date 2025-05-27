@@ -9,7 +9,7 @@ WORKDIR /app/extensions
 RUN apk add --no-cache python3 py3-setuptools build-base curl
 
 # Copy package files first
-COPY ./extensions/package.json ./extensions/bun.lockb* ./
+COPY ./extensions/package.json ./extensions/package.json 
 
 # Install dependencies using Bun
 RUN bun install
