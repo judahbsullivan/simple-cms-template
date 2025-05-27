@@ -1,16 +1,15 @@
 {
   "name": "my-studio",
   "scripts": {
-    "fresh-start": "npm i && npm run build && docker compose up",
-    "dev": "docker compose up",
+    "fresh-start": "bun i && bun run rebuild",
+    "start": "docker compose up",
     "drop": "docker compose down",
     "build-extensions": "tsx ./scripts/build.ts",
-    "build": "npm run build-extensions && docker build -t directus-cms-template .",
-    "docker:dev": "docker compose up -d",
-    "docker:start": "docker compose up --build",
-    "stop": "docker compose down"
+    "rebuild": "bun run build-extensions && docker build -t directus-cms-template . && docker compose up",
+    "dev": "docker compose up -d",
+    "docker:start-build": "docker compose up --build",
+    "restart": "bun run build && docker compose up --build"
   },
-  "packageManager": "npm@9.7.2",
   "dependencies": {
     "@directus/errors": "^2.0.1",
     "@directus/extensions-sdk": "^13.0.4",
