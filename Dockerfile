@@ -5,17 +5,11 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Install build tools for native dependencies if needed
+# Install build tools (optional, remove if not needed)
 RUN apk add --no-cache python3 py3-setuptools build-base curl
 
-# Copy extensions source code
+# Copy extensions folder as-is, no npm install/build because no package.json
 COPY ./extensions /app/extensions
-
-# If you have package.json inside extensions and want to install dependencies & build
-WORKDIR /app/extensions
-
-RUN npm install
-RUN npm run build
 
 ###############################
 # Final Stage
@@ -24,26 +18,25 @@ FROM directus/directus:latest
 
 WORKDIR /directus
 
-# Switch to root to install utilities and set permissions
+# Switch to root for installing tools and permissions
 USER root
 
-# Install jq and curl needed by your start.sh script
+# Install jq and curl needed by start.sh
 RUN apk add --no-cache jq curl
 
-# Copy built extensions from builder stage, set ownership to node user
+# Copy extensions from builder to final image, set ownership
 COPY --from=builder --chown=node:node /app/extensions /directus/extensions
 
-# Copy templates and startup scripts
+# Copy templates and start scripts
 COPY ./templates /directus/templates
 COPY ./scripts/start.sh /directus/start.sh
 COPY ./scripts/start.bat /directus/start.bat
 
-# Make shell script executable
+# Make start.sh executable
 RUN chmod +x /directus/start.sh
 
-# Drop back to non-root user
+# Drop to non-root user
 USER node
 
-# Start container using the Linux shell script
 CMD ["sh", "/directus/start.sh"]
 
